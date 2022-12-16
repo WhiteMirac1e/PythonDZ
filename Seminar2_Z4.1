@@ -1,0 +1,20 @@
+# Задайте список из N элементов, заполненных числами из промежутка [-N, N].
+# Найдите произведение элементов на указанных позициях.
+# Позиции хранятся в файле file.txt в одной строке одно число.
+n = input('Введите число: ')
+n = int(n)
+list = [i for i in range(-n,n+1)]
+print(list)
+f = open('text.txt', 'r')
+a = f.readline()
+a = int(a)
+b = f.readline(2)
+b = int(b)
+f.close()
+
+multi = 1
+i = 0
+while i < len(list):
+    multi = list[a] * list[b]
+    i += 1
+print(multi)
