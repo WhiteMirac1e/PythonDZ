@@ -6,7 +6,7 @@ n = int(input('Введите число: '))
 i = 1
 f = [0, 1]
 f2 = []
-f3 = []
+f3 = [0, 1]
 # Fn = F(n-1) + F(n-2)
 while i <= n:
   f[i] = f[i-1] + f[i-2]
@@ -14,19 +14,22 @@ while i <= n:
   f.append(f[i])
   i += 1  
 print(f'Результат f: {f}')
-
+i = 1
+while i <= n:
+  f3[i] = f3[i-1] + f3[i-2]
+  print(f3)
+  f3.append(f3[i])
+  i += 1  
+print(f'Результат f3: {f3}')
 # F−n = (−1)n+1Fn. Fn = F(n+2)−F(n+1)
-f3 = f
-f2 = f
-f2.reverse()
+f3.reverse()
 
 i = 1
 while i <= n:
-  f2[i] *= (-1) 
-  print(f2)
+  f3[i] *= (-1) 
+  print(f3)
   i += 2  
 
-
-print(f'Результат f2: {f2}')
 print(f'Результат f3: {f3}')
-print(f'Сумма {f2 + f3}')
+print(f'Результат f: {f}')
+print(f'Сумма {f3 + f}')
