@@ -1,0 +1,30 @@
+count = 221
+while count > 28:
+    print("Игрок1 введите количество конфет от 1 до 28: ")
+    p1 = int(input())
+    if p1 > 28:
+        print("Вы ввели число больше 28, введите число от 1 до 28")
+        continue
+    elif p1 < 1:
+        print("Вы ввели число меньше 1, введите число от 1 до 28")
+        continue
+    else:
+        count = count - p1
+        p1s =+ p1
+        print(p1s)
+        print(count) 
+        while count > 28:    
+            print("Игрок2 введите количество конфет от 1 до 28: ")
+            p2 = int(input())
+            if p2 > 28:
+                print("Вы ввели число больше 28, введите число от 1 до 28")
+                continue
+            elif p2 < 1:
+                print("Вы ввели число меньше 1, введите число от 1 до 28")
+                continue
+            else:
+                count = count - p2
+                p2s =+ p2
+                print(p2s)
+                print(count)
+                break
