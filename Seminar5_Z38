@@ -1,0 +1,18 @@
+# 38. Напишите программу, удаляющую из текста все слова, содержащие ""абв"".(Задание из семинара)0
+print('Введите текст: ')
+p = input()
+while ',' in p or '.' in p or ';' in p or ':' in p:
+    p = p.replace(',','')
+    p = p.replace('.','')
+    p = p.replace(';','')
+    p = p.replace(':','')
+print(p)
+
+arr = p.split()
+print(arr)
+
+arr2 =[]
+for word in arr:
+    if "абв" not in word:
+        arr2.append(word)
+print(arr2)
