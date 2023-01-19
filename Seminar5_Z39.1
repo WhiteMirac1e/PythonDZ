@@ -18,10 +18,11 @@ while count > 28:
         continue
     else:
         count = count - p1
-        p1s =+ p1
-        print(p1s)
-        print(count) 
-        while count > 28:    
+        print(count)
+        if count < 28:
+          print("Игрок2 победил")
+        else:
+          while count > 28:    
             print("Игрок2 введите количество конфет от 1 до 28: ")
             p2 = int(input())
             if p2 > 28:
@@ -32,7 +33,8 @@ while count > 28:
                 continue
             else:
                 count = count - p2
-                p2s =+ p2
-                print(p2s)
                 print(count)
-                break
+                if count > 28:
+                  break
+                else:
+                  print("Игрок 1 победил")
